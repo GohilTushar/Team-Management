@@ -1,0 +1,29 @@
+export const roleConfig={
+    OWNER: "OWNER",
+    ADMIN: "ADMIN",
+    MEMBER:"MEMBER",
+}
+
+export const permissionConfig={
+    CREATE_WORKSPACE:"CREATE_WORKSPACE",
+    EDIT_WORKSPACE:"EDIT_WORKSPACE",
+    DELETE_WORKSPACE:"DELETE_WORKSPACE",
+    MANAGE_WORKSPACE_SETTINGS:"MANAGE_WORKSPACE_SETTINGS",
+
+    CREATE_PROJECT:"CREATE_PROJECT",
+    EDIT_PROJECT:"EDIT_PROJECT",
+    DELETE_PROJECT:"DELETE_PROJECT",
+
+    CREATE_TASK:"CREATE_TASK",
+    EDIT_TASK:"EDIT_TASK",
+    DELETE_TASK:"DELETE_TASK",
+
+    ADD_MEMBER:"ADD_MEMBER",
+    EDIT_MEMBER:"EDIT_MEMBER",
+    REMOVE_MEMBER:"REMOVE_MEMBER",
+
+    VIEW_ONLY:"VIEW_ONLY"
+}
+
+export type RoleEnum = keyof typeof roleConfig;
+export type PermissionEnum=keyof typeof permissionConfig
