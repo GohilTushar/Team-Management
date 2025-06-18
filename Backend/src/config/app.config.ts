@@ -8,6 +8,7 @@ export const appConfig = {
 
   GOOGLE_CLIENT_ID: getEnv("GOOGLE_CLIENT_ID", ""),
   GOOGLE_CLIENT_SECRET: getEnv("GOOGLE_CLIENT_SECRET", ""),
+  GOOGLE_CALLBACK_URL: getEnv("GOOGLE_CALLBACK_URL", ""),
 
   JWT_SECRET: getEnv("JWT_SECRET", ""),
   JWT_EXPIRATION: getEnv("JWT_EXPIRATION", "1h"),

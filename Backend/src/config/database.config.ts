@@ -3,7 +3,7 @@ import { appConfig } from "./app.config";
 
 const connectToDatabase = async () => {
   try {
-    await mongoose.connect(appConfig.MONGO_URI);
+    await mongoose.connect(`${appConfig.MONGO_URI}/Team-Management`);
     console.log("Connected to MongoDB successfully");
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
