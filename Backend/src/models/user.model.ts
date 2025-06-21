@@ -43,7 +43,7 @@ const UserSchema = new Schema<IUser>(
     },
     currentWorkSpace: {
       type: Schema.Types.ObjectId,
-      ref: "WorkSpace",
+      ref: "Workspace",
     },
     lastLogin: {
       type: Date,

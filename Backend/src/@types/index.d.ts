@@ -5,7 +5,7 @@ export {};
 declare global {
   namespace Express {
     interface User extends IUser{
-        _id: any;
+        _id: any
         currentWorkSpace:any
     }
   }      
