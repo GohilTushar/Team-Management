@@ -4,8 +4,8 @@ export interface IProject extends Document {
   name: string;
   description: string;
   emoji: string;
-  workspaceId: Schema.Types.ObjectId;
-  createdBy: Schema.Types.ObjectId;
+  workspaceId: mongoose.Types.ObjectId;
+  createdBy: mongoose.Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;
 }

@@ -2,8 +2,8 @@ import mongoose, { Document, Schema, Model } from "mongoose";
 import { IRole } from "./role-permission.model";
 
 export interface IMember extends Document {
-  userId: Schema.Types.ObjectId;
-  workspaceId: Schema.Types.ObjectId;
+  userId: mongoose.Types.ObjectId;
+  workspaceId: mongoose.Types.ObjectId;
   role: IRole
   joinedAt: Date;
 }

@@ -20,7 +20,7 @@ export const RolePermission: Record<RoleEnum, Array<PermissionEnum>> = {
     permissionConfig.DELETE_TASK,
 
     permissionConfig.ADD_MEMBER,
-    permissionConfig.EDIT_MEMBER,
+    permissionConfig.CHANGE_MEMBER_ROLE,
     permissionConfig.REMOVE_MEMBER,
 
     permissionConfig.VIEW_ONLY,

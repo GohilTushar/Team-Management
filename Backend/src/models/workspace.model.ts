@@ -4,7 +4,7 @@ import { generateUUID } from "../utils/uuid";
 export interface IWorkspace extends Document {
   name: string;
   description: string;
-  ownerId: Schema.Types.ObjectId;
+  ownerId: mongoose.Types.ObjectId;
   invitationCode: string;
   resetInvitationCode:() => void;
   createdAt: Date;

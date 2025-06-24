@@ -7,7 +7,7 @@ import {
 export interface IAccount extends Document {
   provider: AccountProviderEnum;
   providerId: string;
-  userId: Schema.Types.ObjectId;
+  userId: mongoose.Types.ObjectId;
   refreshToken: string | null;
   tokenExpiry: Date | null;
   createdAt: Date;

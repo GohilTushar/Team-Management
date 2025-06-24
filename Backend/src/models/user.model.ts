@@ -2,15 +2,15 @@ import mongoose, { Document, Schema, Model, HydratedDocument } from "mongoose";
 import { compareValue, hashValue } from "../utils/bcrypt";
 
 export interface IUser extends Document {
-  name: String;
-  email: String;
-  password?: String;
-  profilePicture?: String | null;
-  isActive: Boolean;
+  name: string;
+  email: string;
+  password?: string;
+  profilePicture?: string | null;
+  isActive: boolean;
   createdAt: Date;
   updatedAt: Date;
   lastLogin: Date | null;
-  currentWorkSpace: Schema.Types.ObjectId | null;
+  currentWorkSpace: mongoose.Types.ObjectId | null;
   comparePassword(password: String): Promise<Boolean>;
   omitPassword(): Omit<IUser, "password">;
 }

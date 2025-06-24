@@ -14,10 +14,10 @@ export interface ITask extends Document {
   status: TaskStatusEnum;
   priority: TaskPriorityEnum;
   dueDate: Date | null;
-  projectId: Schema.Types.ObjectId;
-  assignedTo: Schema.Types.ObjectId | null;
-  workspaceId: Schema.Types.ObjectId;
-  createdBy: Schema.Types.ObjectId;
+  projectId: mongoose.Types.ObjectId;
+  assignedTo: mongoose.Types.ObjectId | null;
+  workspaceId: mongoose.Types.ObjectId;
+  createdBy: mongoose.Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -78,3 +78,6 @@ const TaskSchema = new Schema(
   },
   { timestamps: true }
 );
+
+const TaskModel: Model<ITask> = mongoose.model<ITask>("Task", TaskSchema);
+export default TaskModel;
