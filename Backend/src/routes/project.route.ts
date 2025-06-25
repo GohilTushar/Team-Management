@@ -22,6 +22,11 @@ projectRoutes.get(
   getProjectByIdAndWorkspaceIdController
 );
 
+projectRoutes.get(
+  "/:id/workspace/:workspaceId/analytics",
+  getProjectAnalyticsController
+);
+
 projectRoutes.put(
   "/:id/workspace/:workspaceId/update",
   updateProjectController
@@ -31,11 +36,5 @@ projectRoutes.delete(
   "/:id/workspace/:workspaceId/delete",
   deleteProjectController
 );
-
-projectRoutes.get(
-  "/:id/workspace/:workspaceId/analytics",
-  getProjectAnalyticsController
-);
-
 
 export default projectRoutes;
