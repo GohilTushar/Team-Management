@@ -18,7 +18,6 @@ passport.use(
     async (req: Request, accessToken, refreshToken, profile, done) => {
       try {
         const { email, sub: googleId, picture } = profile._json;
-        console.log(profile);
         if (!googleId) {
           return done(new Error("Google ID or email not found in profile"));
         }

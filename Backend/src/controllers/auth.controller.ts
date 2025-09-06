@@ -1,10 +1,10 @@
 import { NextFunction, Request, Response } from "express";
+import passport from "passport";
 import { asyncHandler } from "../middlewares/asyncHandler.middleware";
 import { appConfig } from "../config/app.config";
 import { registerSchema } from "../validation/auth.validation";
 import { httpStatusCodeType } from "../config/http.config";
 import { registerUserService } from "../services/auth.service";
-import passport from "passport";
 
 export const googleLoginCallback = asyncHandler(
   async (req: Request, res: Response) => {

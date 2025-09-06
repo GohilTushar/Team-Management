@@ -30,10 +30,10 @@ export const getMemberRoleInWorkspace = async (
 
 export const joinWorkspaceByInviteService = async (
   userId: string,
-  inviteCode: string
+  invitationCode: string
 ) => {
   // Find workspace by invite code
-  const workspace = await WorkspaceModel.findOne({invitationCode: inviteCode }).exec();
+  const workspace = await WorkspaceModel.findOne({invitationCode: invitationCode }).exec();
   if (!workspace) {
     throw new Error("Invalid invite code or workspace not found");
   }
